@@ -1,8 +1,15 @@
 spring:
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
-    driver-class-name: com.mysql.jdbc.Driver
+  local:
+    datasource:
+      username: root
+      password: root
+      url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
+      driver-class-name: com.mysql.jdbc.Driver
+  test:
+    datasource:
+      username: InvoiceOnline
+      password: eoi3CRkCiI3VEUTNM1yZ
+      url: jdbc:mysql://10.7.13.48:8066/InvoiceOnline?useUnicode=true&characterEncoding=utf-8
+      driver-class-name: com.mysql.jdbc.Driver
 logging:
   path: /httx/xlsx

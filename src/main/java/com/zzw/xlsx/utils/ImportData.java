@@ -4,6 +4,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.List;
 public class ImportData {
 
     @Autowired
+    @Qualifier("jdbcTemplateTest")
     JdbcTemplate jdbcTemplate;
 
 
@@ -68,7 +70,7 @@ public class ImportData {
     }
 
     public void write(List<Object[]> params) {
-        String sql = "INSERT INTO `cashreceipt` (\n" +
+        String sql = "INSERT INTO `CashReceipt` (\n" +
                 "  `receiptCode`,\n" +
                 "  `voucherNo`,\n" +
                 "  `receiptDate`,\n" +
